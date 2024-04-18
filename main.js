@@ -5,7 +5,7 @@ const atividades = [];
 const notas = [];
 const spanAprovado = '<span class="resultado aprovado">Aprovado</span>';
 const spanReprovado = '<span class="resultado reprovado">Reprovado</span>';
-const notaMinima = (prompt(parseFloat('Digite a nota mínima:')));
+const notaMinima = parseFloat(prompt('Digite a nota minima:'));
 
 let linhas = '';
 
@@ -23,6 +23,7 @@ function adicionaLinha() {
     // capturar os campos
     const inputNomeAtividade = document.getElementById("nome-atividade");
     const inputNotaAtividade = document.getElementById("nota-atividade");
+
     if (atividades.includes(inputNomeAtividade.value)) {
         alert(`A atividade:${inputNomeAtividade.value} ja foi inserida`);
     } else {
